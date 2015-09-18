@@ -50,6 +50,10 @@ header {
       #ItemForm .form_div select:focus {
         border: 1px solid #81bbe7;
         outline: none; }
+    #ItemForm .form_div #hour {
+      width: 40%; }
+    #ItemForm .form_div #minuts {
+      width: 40%; }
     #ItemForm .form_div #dateWork {
       width: 80%; }
   #ItemForm #activity_descr {
@@ -112,7 +116,7 @@ header {
     color: red;
     border: #161B22; }
 
-.my-history {
+.history-title {
   font-weight: bold;
   margin-left: 10px;
   margin-top: 25px; }
@@ -134,5 +138,8 @@ header {
   transition: all 0.5s linear; }
   .btn-add:hover {
     background: #005555; }
+
+.errorClass {
+  border: 1px solid red; }
 
 /*# sourceMappingURL=styles.css.map */

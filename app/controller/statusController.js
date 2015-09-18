@@ -9,9 +9,27 @@ spaceApp.controller('statusController', function($scope) {
         $scope.types = data.types;
         console.log(data);
     });
+    
+    $scope.hours = [];
+    //Creating hours
+    var i =1;
+    for(i=1; i<25; i++)
+    {
+        $scope.hours.push({id: i, value: i});
+    }
+
+    $scope.mints = [];
+    //Creating hours
+    i =1;
+    for(i=1; i<4; i++)
+    {
+        $scope.mints.push({id: i, value: i*15});
+    }
+
+    console.log($scope.hours);
+    //Creating Minutes
 
     //Injecting Dates to the date column
-
     $scope.date = [];
 
     var curr = new Date(); // get current date
@@ -20,7 +38,7 @@ spaceApp.controller('statusController', function($scope) {
     var startDate = new Date(curr.setDate(first));
     startDate = "" + startDate.getFullYear() +"-" +(startDate.getMonth() + 1) + "-" + startDate.getDate() ;
 
-    var i = 0;
+    i = 0;
 
     for(i=0; i<7;i++)
     {

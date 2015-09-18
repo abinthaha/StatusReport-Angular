@@ -32,19 +32,23 @@
         <div class="form_div">
             Project :<br/>
             <select ng-model="getPro"
-                ng-options="project as project.title for project in projects">
+                ng-options="project as project.title for project in projects" id="projct">
             </select>
         </div>
         <div class="form_div">
             Activity Type:<br/>
             <select ng-model="getType"
-                ng-options="type as type.title for type in types">
+                ng-options="type as type.title for type in types" id="type">
             </select>
         </div>
         <div class="form_div">
             Time Spent:<br/>
-                <input type="number" min="1" max="24" ng-model="gethours">
-                <input type="number" min="00" max="45" step="15" ng-model="getMints">
+                <select ng-model="gethours"
+                    ng-options="hour as hour.value for hour in hours" id="hour">
+                </select>
+                <select ng-model="getMints"
+                    ng-options="mint as mint.value for mint in mints" id="minuts">
+                </select>
         </div>
         Activity Description :<br/>
             <textarea required id="activity_descr" rows="5" cols="60" ng-model="getDescription"></textarea >
