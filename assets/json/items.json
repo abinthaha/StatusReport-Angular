@@ -1,0 +1,34 @@
+{
+    "builtItems" : [
+        {
+            "date": "2015-9-16",
+            "pro_name": "N/A",
+            "act_type": "Training",
+            "time": "10 : 00",
+            "description": "Learned BackboneJS"
+        },
+        {
+            "date": "2015-9-17",
+            "pro_name": "N/A",
+            "act_type": "Training",
+            "time": "11 : 00",
+            "description": "Learned routing in AngularJS"
+        }
+    ],
+
+    "projects": [
+        {"id": "01", "title": "Project1"},
+        {"id": "02", "title": "Project2"},
+        {"id": "03", "title": "Project3"},
+        {"id": "04", "title": "Project4"},
+        {"id": "05", "title": "Project5"}
+    ],
+
+    "types": [
+        {"id": "01", "title": "Training"},
+        {"id": "02", "title": "Coding"},
+        {"id": "03", "title": "Testing"},
+        {"id": "04", "title": "Architecturing"},
+        {"id": "05", "title": "System Analysing"}
+    ]
+ }
