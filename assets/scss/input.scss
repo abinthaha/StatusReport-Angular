@@ -68,6 +68,13 @@ header {
                 outline: none;
             }
         }
+        #hour{
+            width: 40%;
+        }
+
+        #minuts{
+            width: 40%;
+        }
 
         #dateWork {
             width: 80%;
@@ -149,7 +156,7 @@ header {
         border: #161B22;
     }
 }
-.my-history {
+.history-title {
     font-weight: bold;
     margin-left: 10px;
     margin-top: 25px;
