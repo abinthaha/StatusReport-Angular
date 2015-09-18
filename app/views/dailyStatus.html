@@ -26,15 +26,15 @@
         </div>
         <div class="form_div">
             Project :<br/>
-                <select ng-model="getPro" >
-                    <option ng-repeat="project in projects" value="{{project.id}}">{{project.title}}</option>
-                </select>
+            <select ng-model="getPro"
+                ng-options="project as project.title for project in projects">
+            </select>
         </div>
         <div class="form_div">
             Activity Type:<br/>
-                <select ng-model="getType">
-                    <option ng-repeat="type in types" value="{{type.id}}">{{type.title}}</option>
-                </select>
+            <select ng-model="getType"
+                ng-options="type as type.title for type in types">
+            </select>
         </div>
         <div class="form_div">
             Time Spent:<br/>

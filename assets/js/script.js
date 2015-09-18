@@ -32,15 +32,14 @@ spaceApp.controller('statusController', function($scope) {
         $scope.historyItems = data.builtItems;
         $scope.projects = data.projects;
         $scope.types = data.types;
-        console.log(data);
     });
 
     $scope.addItem =  function() {
         $scope.historyItems.push(
             {
                 date: $('#dateWork').val(),
-                pro_name: $scope.getPro,
-                act_type: $scope.getType,
+                pro_name: $scope.getPro.title,
+                act_type: $scope.getType.title,
                 time: $scope.gethours +':' +$scope.getMints ,
                 description: $scope.getDescription
             }
