@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Space</title>
+    <script src="app/scripts/angular.min.js"></script>
+    <script src="app/scripts/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js" charset="utf-8"></script>
+    <script src="assets/plugin/underscore.js"></script>
+
+    <script src="assets/js/script.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+</head>
+<body ng-app="spaceApp">
+    <div ng-controller="mainController" class="" >
+        <!-- HEADER -->
+        <header>
+            <div class="main_heading">
+            </div>
+            <ul class="top-tabs">
+                <li>
+                    <div class="btn-topbar">
+                        <a href="#/">Home</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="btn-topbar">
+                        <a href="#/status">Status Report</a>
+                    </div>
+                </li>
+            </ul>
+        </header>
+
+        <!-- ACTUAL CONTENT AND INJECTED VIEWS -->
+        <div id="main">
+            <!-- Contents will be injected here -->
+            <div ng-view></div>
+            <!-- <span>{{message}}</span>
+            Hai -->
+        </div>
+    </div>
+</body>
+</html>

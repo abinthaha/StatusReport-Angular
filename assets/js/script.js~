@@ -1,0 +1,25 @@
+
+    // Creating the module.
+        //Including ngRoute for all our routing needs.
+var spaceApp = angular.module('spaceApp', ['ngRoute']);
+
+    // spaceApp.message = 'Hello World';
+
+    //Configuring our routes
+    spaceApp.config(function($routeProvider) {
+    		$routeProvider
+    			// route for the home page
+    			.when('/', {
+    				templateUrl : 'index.html'
+    			})
+
+    			// route for the about page
+    			.when('/status', {
+    				templateUrl : 'dailyStatus.html'
+    			});
+    	});
+
+    // Creating the controller
+spaceApp.controller('mainController', function($scope){
+    $scope.message = 'Hello WOrld';
+});
