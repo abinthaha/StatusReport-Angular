@@ -62,7 +62,9 @@ spaceApp.controller('statusController', function($scope) {
     };
 
     var validate = function(){
-        if(($('#dateWork').val() === ''))
+
+        console.log($scope.gethours +" : " +$scope.getMints);
+        if($scope.getDate === undefined)
         {
             alert('Date field should not be empty');
             return false;
@@ -75,7 +77,7 @@ spaceApp.controller('statusController', function($scope) {
             alert('Select one Activity type from the list');
             return false;
         }
-        else if (($scope.gethours === undefined) || ($scope.getMints === undefined) || ($scope.gethours === '') || ($scope.getMints === '')) {
+        else if (($scope.gethours === undefined) || ($scope.getMints === undefined) || ($scope.gethours === null) || ($scope.getMints === null)) {
             alert('Working hours should not be Zero');
             return false;
         }
