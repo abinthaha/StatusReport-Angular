@@ -147,20 +147,14 @@ header {
 .errorClass {
   border: 1px solid red; }
 
-.modal {
+#dvLoading {
+  background: #000 url(loader.gif) no-repeat center center;
+  height: 100px;
+  width: 100px;
   position: fixed;
   z-index: 1000;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.8) url("http://i.stack.imgur.com/FhHRx.gif") 50% 50% no-repeat; }
-
-.show_model {
-  display: block;
-  padding: 0px; }
-
-.hide_model {
-  display: none; }
+  left: 50%;
+  top: 50%;
+  margin: -25px 0 0 -25px; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,15 +1,38 @@
-spaceApp.controller('statusController', function($scope) {
+//Factory
+spaceApp.factory('getJsonData', function($http, $q) {
+    return ({
+        getData: function() {
+
+           var deferred = $q.defer();
+           $http.get('assets/json/items.json')
+
+           .success(function(data) {
+              deferred.resolve(data);
+           })
+
+           .error(function(){
+              deferred.reject();
+           });
+
+           return deferred.promise;
+        }
+    });
+});
+
+spaceApp.controller('statusController', function($scope, getJsonData) {
 
     $scope.Model = $scope.Model ;
 
     status = this;
     $scope.message = 4;
 
-    $.getJSON("assets/json/items.json", function(data){
-        $scope.historyItems = data.builtItems;
-        $scope.projects = data.projects;
-        $scope.types = data.types;
-    });
+    getJsonData.getData().then (
+        function(data) {
+            $scope.historyItems = data.builtItems;
+            $scope.projects = data.projects;
+            $scope.types = data.types;
+        }
+    );
 
     //Creating hours
 
