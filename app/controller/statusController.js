@@ -1,38 +1,34 @@
 spaceApp.controller('statusController', function($scope) {
 
+    $scope.Model = $scope.Model ;
+
     status = this;
     $scope.message = 4;
-
-    $(document).on({
-        ajaxStart: function() { $( 'model' ).addClass("show_model");},
-        ajaxStop: function() { $( 'model' ).removeClass("hide_model"); }
-    });
 
     $.getJSON("assets/json/items.json", function(data){
         $scope.historyItems = data.builtItems;
         $scope.projects = data.projects;
         $scope.types = data.types;
-        console.log(data);
     });
 
-    $scope.hours = [];
     //Creating hours
+
+    $scope.hours = [];
+
     var i =1;
     for(i=1; i<25; i++)
     {
         $scope.hours.push({id: i, value: i});
     }
 
+    //Creating Minutes
+
     $scope.mints = [];
-    //Creating hours
     i =1;
     for(i=1; i<4; i++)
     {
         $scope.mints.push({id: i, value: i*15});
     }
-
-    console.log($scope.hours);
-    //Creating Minutes
 
     //Injecting Dates to the date column
     $scope.date = [];
@@ -62,16 +58,18 @@ spaceApp.controller('statusController', function($scope) {
 
     $scope.addItem =  function() {
 
+        console.log($scope.historyItems.getDate.title);
+
         var flag = validate();
 
         if(flag) {
             $scope.historyItems.push(
                 {
-                    date: $scope.getDate.title,
-                    pro_name: $scope.getPro.title,
-                    act_type: $scope.getType.title,
-                    time: $scope.gethours.value +':' +$scope.getMints.value ,
-                    description: $scope.getDescription
+                    date: $scope.historyItems.getDate.title,
+                    pro_name: $scope.historyItems.getPro.title,
+                    act_type: $scope.historyItems.getType.title,
+                    time: $scope.historyItems.gethours.value +':' +$scope.historyItems.getMints.value ,
+                    description: $scope.historyItems.getDescription
                 });
         }
         $('#ItemForm')[0].reset();
@@ -79,44 +77,35 @@ spaceApp.controller('statusController', function($scope) {
     };
 
     var clearfields = function() {
-        $scope.gethours = '';
-        $scope.getMints = '';
-        $scope.getDescription  = '';
+        $scope.historyItems.gethours = '';
+        $scope.historyItems.getMints = '';
+        $scope.historyItems.getDescription  = '';
     };
 
     var validate = function(){
 
-        console.log($scope.gethours +" : " +$scope.getMints);
-        if($scope.getDate === undefined)
+        // console.log($scope.gethours +" : " +$scope.getMints);
+        if($scope.historyItems.getDate === undefined)
         {
             alert('Date field should not be empty');
             return false;
         }
-        else if ($scope.getPro === undefined) {
+        else if ($scope.historyItems.getPro === undefined) {
             alert('Select one project from the list');
             return false;
         }
-        else if ($scope.getType === undefined) {
+        else if ($scope.historyItems.getType === undefined) {
             alert('Select one Activity type from the list');
             return false;
         }
-        else if (($scope.gethours === undefined) || ($scope.getMints === undefined) || ($scope.gethours === null) || ($scope.getMints === null)) {
+        else if (($scope.historyItems.gethours === undefined) || ($scope.historyItems.getMints === undefined) || ($scope.historyItems.gethours === null) || ($scope.historyItems.getMints === null)) {
             alert('Working hours should not be Zero');
             return false;
         }
-        else if (($scope.getDescription === undefined) || ($scope.getDescription === '')) {
+        else if (($scope.historyItems.getDescription === undefined) || ($scope.historyItems.getDescription === '')) {
             alert('Enter your Activity Description');
             return false;
         }
         return true;
-        //  ||
-        //     ($scope.getPro === undefined) ||
-        //     ($scope.getType === undefined) ||
-        //     ($scope.gethours === undefined) ||
-        //     ($scope.getMints === undefined) ||
-        //     ($scope.getDescription === undefined))
-        //     {
-        //
-        //     }
     };
 });

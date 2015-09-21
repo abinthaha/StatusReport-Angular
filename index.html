@@ -10,6 +10,7 @@
     <script src="assets/plugin/underscore.js"></script>
     <script src="app/scripts/module.js" charset="utf-8"></script>
     <script src="app/scripts/route.js" charset="utf-8"></script>
+    <script src="assets/plugin/angular-ui-router.min.js"></script>
     <script src="app/controller/statusController.js" charset="utf-8"></script>
     <script src="app/controller/homeController.js" charset="utf-8"></script>
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -24,12 +25,12 @@
             <ul class="top-tabs">
                 <li>
                     <div class="btn-topbar">
-                        <a href="#/">Home</a>
+                        <a ui-sref="home">Home</a>
                     </div>
                 </li>
                 <li>
                     <div class="btn-topbar">
-                        <a href="#/status">Status Report</a>
+                        <a ui-sref="status">Status Report</a>
                     </div>
                 </li>
             </ul>
@@ -37,10 +38,8 @@
 
         <!-- ACTUAL CONTENT AND INJECTED VIEWS -->
         <div id="main">
+            <div ui-view></div>
             <!-- Contents will be injected here -->
-            <div ng-view></div>
-            <!-- <span>{{message}}</span>
-            Hai -->
         </div>
     </div>
 </body>
