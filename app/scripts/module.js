@@ -1,4 +1,4 @@
 
 // Creating the module.
 //Including ngRoute for all our routing needs.
-var spaceApp = angular.module('spaceApp', ['ui.router']);
+var spaceApp = angular.module('spaceApp', ['ui.router', 'uiRouterStyles']);

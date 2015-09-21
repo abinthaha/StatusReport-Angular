@@ -13,6 +13,9 @@ spaceApp.config(function($stateProvider, $urlRouterProvider) {
         // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
         .state('status', {
         url: '/status',
+        data: {
+            css: ['assets/css/statusPage.css', 'assets/css/historyPage.css']
+        },
         views: {
 
             // the main template will be placed here (relatively named)

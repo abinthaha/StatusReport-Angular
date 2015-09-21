@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-</head>
-<body>
-    <div class="my-history">
-        <h4><b>My History</b></h4>
-    </div>
-    <ul class="historyList">
-        <li ng-repeat="items in historyItems">
-            <div class="hist_date">{{items.date}}</div>
-            <div class="hist_desc">{{items.description}}</div>
-            <div class="hist_time">{{items.time}} Hour(s)</div>
-            <div class="hist_type">{{items.act_type}}</div><br/>
-            <div class="hist_pro">{{items.pro_name}}</div><br/>
-        </li>
-    </ul>
-</body>
-</html>
+<div class="my-history">
+    <h4><b>My History</b></h4>
+</div>
+<ul class="historyList">
+    <li ng-repeat="items in historyItems">
+        <div class="hist_date">{{items.date}}</div>
+        <div class="hist_desc">{{items.description}}</div>
+        <div class="hist_time">{{items.time}} Hour(s)</div>
+        <div class="hist_type">{{items.act_type}}</div><br/>
+        <div class="hist_pro">{{items.pro_name}}</div><br/>
+    </li>
+</ul>

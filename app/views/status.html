@@ -1,47 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-</head>
-<body>
-    <div>
-		<h2 class="page_title">
-			Daily Status
-		</h2>
-	</div>
-    <form ng-submit="addItem()" id="ItemForm" novalidate class="col-md-12">
-        <h5><b>Bursts</b></h5>
-        <div class="form_div">
-            Date: <br/>
-            <select ng-model="historyItems.getDate"
-                ng-options="selectDate as selectDate.title for selectDate in date">
+<div>
+	<h2 class="page_title">
+		Daily Status
+	</h2>
+</div>
+<form ng-submit="addItem()" id="ItemForm" novalidate class="col-md-12">
+    <h5><b>Bursts</b></h5>
+    <div class="form_div">
+        Date: <br/>
+        <select ng-model="historyItems.getDate"
+            ng-options="selectDate as selectDate.title for selectDate in date">
+        </select>
+    </div>
+    <div class="form_div">
+        Project :<br/>
+        <select ng-model="historyItems.getPro"
+            ng-options="project as project.title for project in projects" id="projct">
+        </select>
+    </div>
+    <div class="form_div">
+        Activity Type:<br/>
+        <select ng-model="historyItems.getType"
+            ng-options="type as type.title for type in types" id="type">
+        </select>
+    </div>
+    <div class="form_div">
+        Time Spent:<br/>
+            <select ng-model="historyItems.gethours"
+                ng-options="hour as hour.value for hour in hours" id="hour">
             </select>
-        </div>
-        <div class="form_div">
-            Project :<br/>
-            <select ng-model="historyItems.getPro"
-                ng-options="project as project.title for project in projects" id="projct">
+            <select ng-model="historyItems.getMints"
+                ng-options="mint as mint.value for mint in mints" id="minuts">
             </select>
-        </div>
-        <div class="form_div">
-            Activity Type:<br/>
-            <select ng-model="historyItems.getType"
-                ng-options="type as type.title for type in types" id="type">
-            </select>
-        </div>
-        <div class="form_div">
-            Time Spent:<br/>
-                <select ng-model="historyItems.gethours"
-                    ng-options="hour as hour.value for hour in hours" id="hour">
-                </select>
-                <select ng-model="historyItems.getMints"
-                    ng-options="mint as mint.value for mint in mints" id="minuts">
-                </select>
-        </div>
-        Activity Description :<br/>
-            <textarea required id="activity_descr" rows="5" cols="60" ng-model="historyItems.getDescription"></textarea >
-            <br/>
-        <input class="btn-add" type="submit" value="ADD">
-    </form>
-</body>
-</html>
+    </div>
+    Activity Description :<br/>
+        <textarea required id="activity_descr" rows="5" cols="60" ng-model="historyItems.getDescription"></textarea >
+        <br/>
+    <input class="btn-add" type="submit" value="ADD">
+</form>

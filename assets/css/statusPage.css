@@ -1,0 +1,48 @@
+.page_title {
+  margin-left: 10px; }
+
+#ItemForm {
+  background: #fbfbfb;
+  border: 1px solid #ddd;
+  padding: 15px 10px;
+  margin: 10px;
+  border-radius: 5px; }
+  #ItemForm h5 {
+    color: black; }
+  #ItemForm .form_div {
+    display: inline-block;
+    width: 24%;
+    margin-bottom: 10px; }
+    #ItemForm .form_div input {
+      outline: none;
+      transition: 0.5s all linear; }
+      #ItemForm .form_div input:hover {
+        border: 1px solid #81bbe7; }
+      #ItemForm .form_div input:focus {
+        border: 1px solid #81bbe7;
+        outline: none; }
+    #ItemForm .form_div select {
+      outline: none;
+      width: 80%;
+      transition: 0.5s all linear; }
+      #ItemForm .form_div select:hover {
+        border: 1px solid #81bbe7; }
+      #ItemForm .form_div select:focus {
+        border: 1px solid #81bbe7;
+        outline: none; }
+    #ItemForm .form_div #hour {
+      width: 40%; }
+    #ItemForm .form_div #minuts {
+      width: 40%; }
+    #ItemForm .form_div #dateWork {
+      width: 80%; }
+  #ItemForm #activity_descr {
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 50%;
+    transition: 0.3s all linear; }
+    #ItemForm #activity_descr:hover {
+      border: 1px solid #81bbe7; }
+    #ItemForm #activity_descr:focus {
+      border: 1px solid #81bbe7;
+      outline: none; }
