@@ -153,7 +153,8 @@ header {
   background: rgba(255, 255, 255, 0.8) url("http://i.stack.imgur.com/FhHRx.gif") 50% 50% no-repeat; }
 
 .show_model {
-  display: block; }
+  display: block;
+  padding: 0px; }
 
 .hide_model {
   display: none; }
