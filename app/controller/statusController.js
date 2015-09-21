@@ -3,13 +3,18 @@ spaceApp.controller('statusController', function($scope) {
     status = this;
     $scope.message = 4;
 
+    $(document).on({
+        ajaxStart: function() { $( 'model' ).addClass("show_model");},
+        ajaxStop: function() { $( 'model' ).removeClass("hide_model"); }
+    });
+
     $.getJSON("assets/json/items.json", function(data){
         $scope.historyItems = data.builtItems;
         $scope.projects = data.projects;
         $scope.types = data.types;
         console.log(data);
     });
-    
+
     $scope.hours = [];
     //Creating hours
     var i =1;
