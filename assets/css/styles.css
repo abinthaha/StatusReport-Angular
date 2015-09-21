@@ -66,6 +66,10 @@ header {
       border: 1px solid #81bbe7;
       outline: none; }
 
+.my-history {
+  margin-left: 20px;
+  margin-top: 30px; }
+
 .historyList {
   list-style-type: none;
   padding: 0px;
@@ -143,7 +147,6 @@ header {
   border: 1px solid red; }
 
 .modal {
-  display: block;
   position: fixed;
   z-index: 1000;
   top: 0;
