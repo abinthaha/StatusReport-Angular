@@ -70,7 +70,7 @@ spaceApp.controller('statusController', function($scope) {
                     date: $scope.getDate.title,
                     pro_name: $scope.getPro.title,
                     act_type: $scope.getType.title,
-                    time: $scope.gethours +':' +$scope.getMints ,
+                    time: $scope.gethours.value +':' +$scope.getMints.value ,
                     description: $scope.getDescription
                 });
         }
